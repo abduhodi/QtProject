@@ -1,10 +1,11 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
-
+from signals import Signal
 
 class Form(QtWidgets.QWidget):
     def __init__(self) -> None:
         super().__init__()
         self.setupUi()
+        self.signal = Signal()
 
     def setupUi(self):
         self.setObjectName("Form")
@@ -244,4 +245,6 @@ class Form(QtWidgets.QWidget):
         self.lineEdit_6.clear()
         self.lineEdit_7.clear()
         self.comboBox.setCurrentIndex(0)
+        self.signal.main.emit()
+        self.close()
 

@@ -243,6 +243,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def form(self):
         self.signal.form.emit()
+        self.close()
               
         
     def next_item(self):
@@ -277,11 +278,3 @@ class MainWindow(QtWidgets.QMainWindow):
     def like_btn(self):
         self.likeLabel.setIcon(QtGui.QIcon("img/heart-full.png"))
         print("clicked")
-
-
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     ui = MainWindow()
-#     ui.show()
-#     sys.exit(app.exec())

@@ -16,6 +16,7 @@ if __name__ == "__main__":
     main = MainWindow()
 
     form = Form()
+    form.signal.main.connect(main.show)
 
     main.signal.form.connect(form.show)
 
